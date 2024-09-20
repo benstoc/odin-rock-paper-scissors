@@ -31,11 +31,12 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    let youWin = false;
     if (humanChoice === computerChoice) {
         console.log("It's a tie!");
         return;
     }
+
+    let youWin = false;
 
     if (
         (humanChoice === 'rock' && computerChoice === 'scissors') ||
@@ -52,15 +53,24 @@ function playRound(humanChoice, computerChoice) {
         console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
         computerScore++;
     }
+}
 
+function playGame(rounds) {
+    let counter = 0
+
+    while (counter < rounds) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+
+        playRound(humanChoice, computerChoice);
+        counter++;
+    }
 }
 
 let humanScore = 0;
 let computerScore = 0;
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-
-playRound(humanChoice, computerChoice);
+playGame(rounds=5)
+console.log(`You: ${humanScore}     Computer: ${computerScore}`)
 
 
