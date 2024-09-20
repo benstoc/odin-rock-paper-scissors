@@ -12,8 +12,15 @@ computer's choice.
 
 
 //Get computer's choice
-    //randomly generate a numer from 1-100
+    //randomly generate a number
     //depending on outcome, assign 'rock', 'paper', or 'scissors
+
+function getComputerChoice() {
+    let choice = Math.floor(Math.random() * 3);
+    if (choice === 0) return 'rock';
+    if (choice === 1) return 'paper';
+    if (choice === 2) return 'scissors';
+}
 
 // get user input
 //Initialize a variable and set it's value to user input
@@ -22,6 +29,20 @@ computer's choice.
 //Check if the input is valid (rock, paper, or scissors)
     //If the input is valid exit loop
     //Re-prompt the user for input if input in invalid
+
+function getHumanChoice() {
+    let choice
+    while (true) {
+        choice = prompt('rock, paper, or scissors?')
+        choice = choice.toLowerCase()
+        if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
+            return choice
+        } else {
+            alert(' Invalid input!!' )
+        }
+    }
+}
+getHumanChoice()
 
 //Compare user and computer inputs
 //the win condition is as follows: rock > scissors > paper > rock
