@@ -30,7 +30,37 @@ function getHumanChoice() {
     }
 }
 
-//Compare user and computer inputs
-//the win condition is as follows: rock > scissors > paper > rock
+function playRound(humanChoice, computerChoice) {
+    let youWin = false;
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie!");
+        return;
+    }
+
+    if (
+        (humanChoice === 'rock' && computerChoice === 'scissors') ||
+        (humanChoice === 'paper' && computerChoice === 'rock') ||
+        (humanChoice === 'scissors' && computerChoice === 'paper')
+        ) {
+        youWin = true;
+    }
+
+    if (youWin) {
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
 
 
