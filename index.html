@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="rps.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="rpc.js"></script>
   </head>
   <body>
-    <button id="rock" class="option">Rock</button>
-    <button id="paper" class="option">Paper</button>
-    <button id="scissors" class="option">Scissors</button>
+    <h1>Rock Paper Scissors </h1>
+    <div id="scoreboard" class="container">
+      <div class="player">
+        <div>Player</div>
+        <div class="score">0</div>
+      </div>
+      <div class="middle">
+        <div class="round">Round: <span>1</span></div>
+      </div>
+      <div class="computer">
+        <div>Computer</div>
+        <div class="score">0</div>
+      </div>
+    </div>
 
-    <div class="results">Score: 0 - 0</div>
+    <div id="display" class="container">
+      <div class="human-choice">❓</div>
+      <div class="result">First to five wins!</div>
+      <div class="computer-choice">❓</div>
+    </div>
+
+    <div class="choice-container container">
+      <div class="choice-label">Make a choice:</div>
+      <div id="choices">
+        <div id="rock" class="choice">🪨</div>
+        <div id="paper" class="choice">📄</div>
+        <div id="scissors" class="choice">✂️</div>
+      </div>
+    </div>
   </body>
 </html>

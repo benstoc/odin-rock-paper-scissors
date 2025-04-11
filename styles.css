@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    border: grey 8px solid;
+    border-radius: 16px;
+    max-width: 40vw;
+    margin: auto;
+    margin-bottom: 2vh;
+    padding: 3vh 0vw;
+}
+
+#scoreboard,
+#display {
+    justify-content: space-around;
+    align-items: center;
+}
+
+#scoreboard > div {
+    text-align: center;
+    font-size: 2em;
+    flex: 1;
+}
+
+.choice-container {
+    flex-direction: column;
+}
+
+#choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choice,
+.human-choice,
+.computer-choice,
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    font-size: 6em;
+    margin: auto;
+}
+
+.computer-choice,
+.human-choice {
+    text-align: center;
+    flex: 1;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+.result {
+    font-size: 20px;
+    text-align: center;
+}
+
+.choice-label {
+    font-size: 20px;
+    margin: auto;
+}
